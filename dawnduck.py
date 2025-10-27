@@ -6,6 +6,7 @@ import socket
 import webbrowser
 import os
 import json
+from datetime import datetime
 
 def open_notesapp():
     """Open the default notes app based on the operating system."""
@@ -77,8 +78,9 @@ def check_internet():
         return False
 
 def load_config():
-    """Load websites from config.json or create default."""
+    """Load websites from config.json or create default if it doesn't exist"""
     default_config = {
+        "wake_up_time": "09:00",
         "websites": [
             "https://mail.google.com",
             "https://github.com",
@@ -101,13 +103,13 @@ def load_config():
             return json.load(f)
 
 def type_message(text, delay=0.03):
-    """Type a message with proper delay."""
+    """Type every message with proper delay"""
     keyboard.write(text, delay=delay)
     keyboard.press_and_release('enter')
     time.sleep(0.3)
 
 def type_good_morning():
-    """Types a cute good morning message."""
+    """Types a cute good morning message with a cat UwU"""
     # Add spacing
     for _ in range(8):
         keyboard.press_and_release('enter')
@@ -119,6 +121,57 @@ def type_good_morning():
     type_message(r"(^._.^)ﾉ  < Good meowrning!")
     type_message(r"")
     time.sleep(0.5)
+
+def check_wake_up_time(target_time):
+    """Check if user woke up on time and return messages based on the current time"""
+    try:
+        # Parse target time (HH:MM)
+        target_hour, target_minute = map(int, target_time.split(':'))
+
+        # Get current time
+        now = datetime.now()
+        current_hour = now.hour
+        current_minute = now.minute
+
+        # Convert to minutes for easier comparison
+        target_minutes = target_hour * 60 + target_minute
+        current_minutes = current_hour * 60 + current_minute
+
+        # Calculating the difference between now and the wake up time 
+        diff = current_minutes - target_minutes
+
+        # message based on the time diff
+        if diff <= -30:
+            return r"Woke Up too early did you get the right amount of sleep?"
+        elif diff < 0:
+            return r"a bit early eh? Niceeee!"
+        elif diff < 15:
+            return r"PURRFECT TIMING LETS START THE DAY WOOHOOO"
+        elif diff <= 30:
+            return r"Slept a bit too much? No worries we can catch up easily"
+        elif diff <= 60:
+            return r"Overslept? BE ON TIME TOMORROW!!"
+        elif diff <= 120:
+            return r"Where were you DAWG? YOU MISSED HALF THE MORNING!!"
+        else:
+            return r"Really? this late? are you feeling okay?? Anyways lets get started"
+
+    except Exception as e:
+        return "Couldn't check wake time, but good morning anyway!"
+
+def display_wake_time_check(target_time):
+    """Display wake time check in notepad."""
+    now = datetime.now()
+    current_time = now.strftime("%I:%M %p")
+    
+    type_message(f"[INFO] Current time: {current_time}")
+    type_message(f"[INFO] Target wake time: {target_time}")
+    time.sleep(0.5)
+    
+    message = check_wake_up_time(target_time)
+    type_message(f"[STATUS] {message}")
+    type_message(r"")
+    time.sleep(1)
 
 def check_and_display_internet():
     """checking internet connection and displaying status."""
@@ -147,7 +200,7 @@ def open_websites(websites):
         
         # Open website
         webbrowser.open(website)
-        time.sleep(2)  # Wait for borwser to open
+        time.sleep(2)  # Wait for browser to open
         
         # Return focus to notepad
         focus_notepad()
@@ -174,7 +227,7 @@ def close_notepad():
     time.sleep(1)
     
     if os_name == "Windows":
-        pyautogui.hotkey('ctrl', 'w') # alt+f4 was not working for me maybe because of some focus issue or laptop fn button
+        pyautogui.hotkey('ctrl', 'w')  # alt+f4 was not working for me maybe because of some focus issue or laptop fn button
         time.sleep(0.5) 
         pyautogui.press('tab')
         time.sleep(0.3)
@@ -199,29 +252,35 @@ def main():
     print("=" * 50)
     print("\nStarting...")
     
+    # Load config
+    config = load_config()
+    
     # Open notepad
-    print("\n[1/5] Opening notepad...")
+    print("\n[1/6] Opening notepad...")
     open_notesapp()
     
     # Type good morning
-    print("[2/5] Typing good morning message...")
+    print("[2/6] Typing good morning message...")
     type_good_morning()
     
+    # Check wake time
+    print("[3/6] Checking wake time...")
+    display_wake_time_check(config.get('wake_up_time', '09:00'))
+    
     # Check internet
-    print("[3/5] Checking internet connection...")
+    print("[4/6] Checking internet connection...")
     internet_available = check_and_display_internet()
     
     # Open websites if internet is available
     if internet_available:
-        print("[4/5] Opening websites (switching back to notepad after each website)...")
-        config = load_config()
+        print("[5/6] Opening websites (switching back to notepad after each website)...")
         open_websites(config['websites'])
     else:
-        print("[4/5] Skipping websites (no internet)...")
+        print("[5/6] Skipping websites (no internet)...")
         time.sleep(2)
     
     # Type goodbye
-    print("[5/5] Saying goodbye...")
+    print("[6/6] Saying goodbye...")
     type_goodbye()
     
     # Close notepad
