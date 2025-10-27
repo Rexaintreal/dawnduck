@@ -1,11 +1,17 @@
+<div align="center">
+
 # DawnDuck v1.0
 
-DawnDuck is a USB HID automation tool that opens your morning routine apps and websites automatically. It types cute messages, checks if you're on time, and gets your day started!
+**Your friendly morning assistant that helps you start your day right!**  
+DawnDuck is a USB HID automation tool that opens your morning routine apps and websites automatically.  
+It types cute messages, checks if you're on time, and gets your day started!
 
 [![Python 3.12.10](https://img.shields.io/badge/python-3.12.10-blue.svg)](https://www.python.org/downloads/release/python-31210/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-dawnduck-black?logo=github)](https://github.com/Rexaintreal/dawnduck)
 [![Built for PicoDucky](https://img.shields.io/badge/Built%20for-PicoDucky-orange)](https://picoducky.hackclub.com/)
 [![Hack Club Time](https://hackatime-badge.hackclub.com/U09B8FXUS78/dawnduck)](https://hackatime-badge.hackclub.com/U09B8FXUS78/dawnduck)
+
+</div>
 
 
 ## Demo Video
