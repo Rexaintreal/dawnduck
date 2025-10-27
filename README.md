@@ -1,7 +1,5 @@
 # DawnDuck v1.0
 
-> Morning assistant that helps you start your day right
-
 DawnDuck is a USB HID automation tool that opens your morning routine apps and websites automatically. It types cute messages, checks if you're on time, and gets your day started!
 
 [![Python 3.12.10](https://img.shields.io/badge/python-3.12.10-blue.svg)](https://www.python.org/downloads/release/python-31210/)
@@ -104,7 +102,7 @@ python dawnduck.py
 
 ### Core Requirements 
 - **Open Source** - Full source code available
-- **Demo Video** - [Link]
+- **Demo Video** - [Link](https://drive.google.com/file/d/1RgnQ6OoujTX302CRC5P6SvnvvXkUl29m/view?usp=drive_link)
 - **Detailed README** - You're reading it rn lol!
 - **Non-Malicious** - Just helpful morning automation (I'll actually use it for leetcode day streaks and typing test)
 
