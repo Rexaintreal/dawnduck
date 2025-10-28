@@ -343,7 +343,7 @@ MIT [LICENSE](LICENSE)
 ## Acknowledgements
 
 
-
+[NICO For testing it!](https://github.com/RetrogradeDev) [his portfolio](https://pod.stio.studio/)
 [REFERENCE DOCS](https://docs.circuitpython.org/projects/hid/en/latest/api.html)
 [ADAFRUIT](https://learn.adafruit.com/circuitpython-essentials/circuitpython-hid-keyboard-and-mouse)
 Built with help from tutorials and docs across the internet. Thanks to Hack Club for PicoDucky YSWS.
@@ -359,8 +359,6 @@ Built with help from tutorials and docs across the internet. Thanks to Hack Club
 
 
 Check out my other stuff:
-
-
 
 - [Libro Voice](https://github.com/Rexaintreal/Libro-Voice) - PDF to Audio Converter
 - [Snippet Vision](https://github.com/Rexaintreal/Snippet-Vision) - YouTube Video Summarizer
@@ -392,3 +390,4 @@ Built by **Saurabh Tiwari**
 - Email: [saurabhtiwari7986@gmail.com](mailto:saurabhtiwari7986@gmail.com)  
 - Twitter: [@Saurabhcodes01](https://x.com/Saurabhcodes01)
 - Instagram: [@saurabhcodesawfully](https://instagram.com/saurabhcodesawfully)
+  
