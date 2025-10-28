@@ -16,9 +16,14 @@ DawnDuck is a USB HID automation tool that opens your morning routine apps and w
 
 ## Demo Video
 
+
+**Thank you [Nico](https://github.com/RetrogradeDev) for testing it on Pico!**
+Demo Video Using Pico (dawnduckpico.py) [WATCH IT HERE](https://drive.google.com/file/d/1jFVerF5OoLDsEQiagDVSvXAKIVcPKHfa/view?usp=sharing)
+
+
+
 **FOR THE NON PICO ONE** [Watch it here](https://drive.google.com/file/d/1RgnQ6OoujTX302CRC5P6SvnvvXkUl29m/view?usp=sharing)
 
-im testing it for the PICO
 ---
 
 ## Two Versions Available
