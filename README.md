@@ -177,7 +177,7 @@ Dont touch keyboard/mouse while its running. Takes about 30-60 seconds.
   - Pico auto-restarts
 
 **Configuration:**
-Edit top of `code.py`:
+Edit top of `dawnduckpico.py`:
 ```python
 
 OS = "windows" # Change to "mac" or "linux" it might work for them too
@@ -197,7 +197,7 @@ TYPING_DELAY = 0.03 # adjust if too fast or too slow
 ```
 
 **Usage:**
-
+Please make sure only the browser is opened while plugging it in! 
 1. Have a browser already open
 
 2. Plug in PicoDucky
