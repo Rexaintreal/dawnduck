@@ -1,10 +1,19 @@
 <div align="center">
+<<<<<<< HEAD
 
 # DawnDuck
 
 **Your friendly morning assistant that helps you start your day right**  
 DawnDuck is a USB HID automation tool that opens your morning routine apps and websites automatically.  
 It types cute messages and gets your day started.
+=======
+
+# DawnDuck v1.0
+
+**Your friendly morning assistant that helps you start your day right!**  
+DawnDuck is a USB HID automation tool that opens your morning routine apps and websites automatically.  
+It types cute messages, checks if you're on time, and gets your day started!
+>>>>>>> 2e20dea9dd844457f0f4db3a4aa7d840a3c42720
 
 [![Python 3.12.10](https://img.shields.io/badge/python-3.12.10-blue.svg)](https://www.python.org/downloads/release/python-31210/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-dawnduck-black?logo=github)](https://github.com/Rexaintreal/dawnduck)
@@ -13,7 +22,10 @@ It types cute messages and gets your day started.
 
 </div>
 
+<<<<<<< HEAD
 ---
+=======
+>>>>>>> 2e20dea9dd844457f0f4db3a4aa7d840a3c42720
 
 ## Demo Video
 
@@ -156,7 +168,15 @@ TYPING_DELAY = 0.03  # adjust if too fast or too slow
 6. Switches back to notepad after each site
 7. Closes notepad
 
+<<<<<<< HEAD
 ---
+=======
+### Core Requirements 
+- **Open Source** - Full source code available
+- **Demo Video** - [Link](https://drive.google.com/file/d/1RgnQ6OoujTX302CRC5P6SvnvvXkUl29m/view?usp=drive_link)
+- **Detailed README** - You're reading it rn lol!
+- **Non-Malicious** - Just helpful morning automation (I'll actually use it for leetcode day streaks and typing test)
+>>>>>>> 2e20dea9dd844457f0f4db3a4aa7d840a3c42720
 
 ## File Structure
 
